@@ -1,0 +1,19 @@
+# Materials: link to ../../Textures/Foliage or ../../Textures/Tower
+
+newmtl M_Bark_Shrub
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+Ns 5
+map_Kd ../../Textures/Foliage/bark_oak.png
+
+newmtl M_Canopy_Shrub
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+Ns 5
+
+newmtl M_Leaf_Shrub
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+Ns 5
+map_Kd ../../Textures/Foliage/leaf_dark.png
+map_d ../../Textures/Foliage/leaf_dark.png

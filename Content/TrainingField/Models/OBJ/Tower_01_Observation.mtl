@@ -1,0 +1,19 @@
+# Materials: link to ../../Textures/Foliage or ../../Textures/Tower
+
+newmtl M_Powder_Coated_Steel
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+Ns 5
+map_Kd ../../Textures/Tower/steel_grey.png
+
+newmtl M_Roof
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+Ns 5
+map_Kd ../../Textures/Tower/roof_dull.png
+
+newmtl M_Concrete
+Kd 0.7 0.7 0.7
+Ks 0.0 0.0 0.0
+Ns 5
+map_Kd ../../Textures/Tower/concrete.png
