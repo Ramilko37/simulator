@@ -22,7 +22,7 @@ jobs:
           import hashlib, os, pathlib, shutil, zipfile
           name = os.environ['ARCHIVE']
           parts = sorted(pathlib.Path('parts').glob(name + '.part*'))
-          assert [p.name for p in parts] == [f'{name}.part{i:03d}' for i in range(39)], 'Missing or unexpected parts'
+          assert [p.name for p in parts] == [f'{name}.part{i:03d}' for i in range(150)], 'Missing or unexpected parts'
           with open(name, 'wb') as output:
               for part in parts:
                   with part.open('rb') as source:
@@ -49,10 +49,18 @@ jobs:
           print(asset['browser_download_url'])
       - name: Remove transfer parts
         timeout-minutes: 3
+        shell: python
         run: |
-          for part in parts/*; do
-            gh release delete-asset "$TAG" "$(basename "$part")" --repo "$GITHUB_REPOSITORY" --yes
-          done
+          import concurrent.futures, json, os, subprocess
+          repo = os.environ['GITHUB_REPOSITORY']
+          expected = {f'{os.environ["ARCHIVE"]}.part{i:03d}' for i in range(150)}
+          release = json.loads(subprocess.check_output(['gh', 'api', f'repos/{repo}/releases/tags/{os.environ["TAG"]}'], timeout=20))
+          ids = [a['id'] for a in release['assets'] if a['name'] in expected]
+          def remove(asset_id):
+              subprocess.run(['gh', 'api', '--method', 'DELETE', f'repos/{repo}/releases/assets/{asset_id}'], check=True, timeout=20)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+              list(pool.map(remove, ids))
+          print('Removed temporary transfer parts only')
       - name: Publish the verified distribution
         timeout-minutes: 1
         run: timeout 30s gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --prerelease
