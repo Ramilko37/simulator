@@ -1,0 +1,52 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "",
+  "Description": "",
+  "Plugins": [
+    {
+      "Name": "ModelingToolsEditorMode",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "ModelContextProtocol",
+      "Enabled": false,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "AllToolsets",
+      "Enabled": false,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "PythonScriptPlugin",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "GameFeatures",
+      "Enabled": true
+    }
+  ],
+  "Modules": [
+    {
+      "Name": "DroneTrainerEditor",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "DroneTrainer",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

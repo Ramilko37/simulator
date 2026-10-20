@@ -1,13 +1,11 @@
-# DroneTrainer — готовая игра
+# DroneTrainer — исходный проект Unreal Engine
 
-Этот репозиторий предназначен для распространения готовой игры. Архивы находятся в [Releases](https://github.com/Ramilko37/simulator/releases).
+[Скачать папку проекта ZIP](https://github.com/Ramilko37/simulator/archive/refs/heads/main.zip)
 
-## macOS — Apple Silicon
+В корне находятся `DroneTrainer.uproject`, `Config/`, `Content/`, `Source/` и `Tests/`. Это исходный UE-проект с C++-кодом, картой и ассетами. Проектных плагинов `Plugins/` нет. Движок, Binaries, Intermediate, Saved и DerivedDataCache в репозиторий не включены.
 
-[Скачать DroneTrainer для Mac](https://github.com/Ramilko37/simulator/releases/download/u2a-macos-arm64/DroneTrainer-macOS-AppleSilicon.zip)
+Использовался Unreal Engine 5.8.3. Откройте `DroneTrainer.uproject` в Unreal Editor. Поскольку проект содержит C++, для компиляции на Windows нужны инструменты C++ Visual Studio. Сборка на Windows не выполнялась.
 
-Распакуйте ZIP и перенесите DroneTrainer.app в Applications. Unreal Editor для игры не нужен. Сборка arm64, macOS 14 или новее. Тестовая версия У2А: уроки 1 и 2. Подпись локальная (ad-hoc), Apple notarization отсутствует. Проверена на исходном Mac; запуск на другом Mac ещё не подтверждён.
+Только в передаваемой копии отключены необязательные редакторские плагины `ModelContextProtocol` и `AllToolsets`: они служат для связи с ИИ и установлены вне проекта на исходном Mac. Локальный токен Android File Server удалён. Игровой код и бинарные ассеты сохранены без изменений.
 
-## Windows
-
-Готового Windows-дистрибутива пока нет. Mac-архив не предназначен для Windows.
+Ранее опубликованная Mac-сборка остаётся в [Releases](https://github.com/Ramilko37/simulator/releases).
