@@ -1,0 +1,37 @@
+{
+  "Bush_01": {
+    "trunk": 72,
+    "canopy": 480,
+    "leaves": 1020
+  },
+  "Bush_02": {
+    "trunk": 108,
+    "canopy": 720,
+    "leaves": 1530
+  },
+  "Bush_03": {
+    "trunk": 132,
+    "canopy": 880,
+    "leaves": 1870
+  },
+  "Tree_01_Oak": {
+    "trunk": 136,
+    "canopy": 720,
+    "leaves": 2430
+  },
+  "Tree_02_Birch": {
+    "trunk": 192,
+    "canopy": 1040,
+    "leaves": 2912
+  },
+  "Tree_03_Spruce": {
+    "trunk": 1532,
+    "canopy": 2520,
+    "leaves": 2268
+  },
+  "Tower_01_Observation": {
+    "steel": 1440,
+    "roof": 12,
+    "concrete": 48
+  }
+}

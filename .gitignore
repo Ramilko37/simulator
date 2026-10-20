@@ -1,0 +1,10 @@
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+.idea/
+__pycache__/
+.DS_Store
+*.sln
+*.xcworkspace/

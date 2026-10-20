@@ -1,0 +1,22 @@
+{
+  "name": "training_field_poc_assets",
+  "created": "2026-10-14",
+  "purpose": "Unreal Engine drone training-field scene",
+  "style": "original simplified procedural game-ready assets (not photogrammetry)",
+  "units": "meters",
+  "formats": {"glb": "glTF Y-up, embedded textures and PBR materials", "obj": "Wavefront OBJ Z-up and external MTL textures"},
+  "models": [
+    {"file": "Bush_01", "description": "low spreading bush", "triangles": 1572},
+    {"file": "Bush_02", "description": "round bush", "triangles": 2358},
+    {"file": "Bush_03", "description": "tall bush", "triangles": 2882},
+    {"file": "Tree_01_Oak", "description": "broadleaf oak", "triangles": 3286},
+    {"file": "Tree_02_Birch", "description": "slender birch", "triangles": 4144},
+    {"file": "Tree_03_Spruce", "description": "evergreen spruce", "triangles": 6320},
+    {"file": "Tower_01_Observation", "description": "metal watchtower and radio mast", "triangles": 1500}
+  ],
+  "landscape_materials": ["Ground_Grass", "Ground_Dirt"],
+  "ground_maps": ["BaseColor", "Normal_DX", "Roughness", "AO"],
+  "ground_resolution": [2048, 2048],
+  "metallic_ground_and_foliage": 0,
+  "known_limitations": ["no LODs", "no collisions", "no wind animation", "not engine-validated", "procedural source detail generated below 2K resolution"]
+}
